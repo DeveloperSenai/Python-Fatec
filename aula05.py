@@ -86,17 +86,76 @@ os.system("color 6")
 #NUMERO
 #MAIORNUMERO
 
-maiornumero=0
-numero=0
+# maiornumero=0
+# numero=0
 
 
-for i in range(5):
-    numero = float(input("Digite um numero: "))
+# for i in range(5):
+#     numero = float(input("Digite um numero: "))
     
-    # if i ==0:  #- validação para numeros negativos!
-    #     maiornumero=numero 
+#     # if i ==0:  #- validação para numeros negativos!
+#     #     maiornumero=numero 
     
-    if numero > maiornumero:
-        maiornumero = numero
+#     if numero > maiornumero:
+#         maiornumero = numero
 
-print(maiornumero)
+# print(maiornumero)
+
+
+#votação
+print("*"*20,"PROGRAMA DE VOTAÇÃO 2026","*"*20)
+
+candidato1 = input("Digite seu nome: ")
+candidato1Numero = input("Digite seu numero de candidatura: ")
+candidatoVoto1=0
+
+candidato2 = input("Digite seu nome: ")
+candidato2Numero = input("Digite seu numero de candidatura: ")
+candidatoVoto2=0
+
+candidato3 = input("Digite seu nome: ")
+candidato3Numero = input("Digite seu numero de candidatura: ")
+candidatoVoto3=0
+
+print("-"*50)
+
+print(f"""  
+      ELEIÇÃO - CANDIDATOS:
+      {candidato1} - {candidato1Numero}
+      {candidato2} - {candidato2Numero}
+      {candidato3} - {candidato3Numero}
+      """)
+
+for i in range(10):
+    voto = input("Digite o numero do candidato para votar: ")
+    
+    if voto == candidato1Numero:
+        candidatoVoto1 =  candidatoVoto1 + 1
+        print(f"VOTO COMPUTADO PARA {candidato1}")
+    elif voto == candidato2Numero:
+        candidatoVoto2 =  candidatoVoto2 + 1
+        print(f"VOTO COMPUTADO PARA {candidato2}")
+    elif voto == candidato3Numero:
+        candidatoVoto3 =  candidatoVoto3 + 1
+        print(f"VOTO COMPUTADO PARA {candidato3}")
+    else:
+        print("CANDIDATO NÃO ENCONTADO , VOTO ANULADO!")
+        
+print("-"*50)
+print("RESULTADO DA ELEIÇÃO")
+
+print(f"""  
+      RESULTADO DAS ELEIÇÕES:
+      {candidato1} - {candidatoVoto1}
+      {candidato2} - {candidatoVoto2}
+      {candidato3} - {candidatoVoto3}
+      """)
+
+if candidatoVoto1 > candidatoVoto2 and candidatoVoto1 > candidatoVoto3:
+    print(f"VENCEDOR {candidato1}")
+elif candidatoVoto2 > candidatoVoto1 and candidatoVoto2 > candidatoVoto3:
+    print(f"VENCEDOR {candidato2}")
+elif candidatoVoto3 > candidatoVoto1 and candidatoVoto3 > candidatoVoto2:
+    print(f"VENCEDOR {candidato3}")
+else:
+    print(f"HOUVE UM EMPATE, NECESSÁRIO NOVO TURNO!")
