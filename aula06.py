@@ -78,3 +78,23 @@ os.system("color 6")
 #SORTEIO
 
 
+import random
+
+numeroMaquina = '' 
+numeroUsuario = 0
+
+while numeroMaquina != numeroUsuario: 
+    
+    numeroMaquina = random.randint(1,10)
+    numeroUsuario = int(input("Tente adivinhar o numero: "))
+    
+    if numeroMaquina == numeroUsuario:
+        print(f"A MÁQUINA PENSOU EM {numeroMaquina}")
+        print(f"VOCE DIGITOU {numeroUsuario}")
+        print("*"*10,"PARABENS VOCE ACERTOU , DIA DE SORTE :),","*"*10)
+    else:
+        print(f"A MÁQUINA PENSOU EM {numeroMaquina}")
+        print(f"VOCE DIGITOU {numeroUsuario}")
+        print("*"*10,"VOCE ERROU, TENTE NOVAMENTE :(","*"*10)
+
+
