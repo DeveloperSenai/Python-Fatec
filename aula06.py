@@ -69,9 +69,12 @@ os.system("color 6")
 
 
 
-import random 
+# import random 
 
-numero = random.randint(0,5) #GERA UM NUMERO ALEATORIO ENTRE 0 E 5
-print(numero)
+# numero = random.randint(0,5) #GERA UM NUMERO ALEATORIO ENTRE 0 E 5
+# print(numero)
+
+
+#SORTEIO
 
 
